@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
+    <IsPackable>false</IsPackable>
+    <ReleaseVersion>0.9</ReleaseVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Models\RpcParameter.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="HangFire" Version="1.7.4" />
+    <PackageReference Include="MailKit" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.All"><PrivateAssets Condition="'%(PackageReference.Version)' == ''">all</PrivateAssets>
+        <Publish Condition="'%(PackageReference.Version)' == ''">true</Publish>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.2.0" />
+    <PackageReference Include="Minio" Version="3.0.12" />
+    <PackageReference Include="SQLJSONReader" Version="1.1.0" />
+    <PackageReference Include="WindowsAzure.Storage" Version="9.3.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.1" />
+  </ItemGroup>
+
+</Project>

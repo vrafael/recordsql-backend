@@ -6,6 +6,11 @@ Description
 
 Backend for object-relational framework RecordSQL (Record v2)
 
+Links
+----------
+* [recordsql-database](https://github.com/vrafael/recordsql-database)
+* [recordsql-frontend](https://github.com/vrafael/recordsql-frontend)
+
 Instruction
 ----------
 ### Start .NET Core application on Ubuntu
